@@ -24,7 +24,11 @@ public class ST10434179_PROG6112_SuppExam_MichaelHerring_Semester2 {
     
     
     
-    
+        System.out.println("Please enter the operation results to display: ");
+        System.out.println("1) \t Total Operations:"
+                + "\n 2) \t Average Operations: "
+                + "\n 3) \t Max Operations: "
+                + "\n 4) \t Min Operations: ");
     
     
     }

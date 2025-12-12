@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author micha
  */
-public class ST10434179_PROG6112_SuppExam_MichaelHerring_Semester2 {
+public class Main {
 
     /**
      * @param args the command line arguments

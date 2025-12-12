@@ -10,6 +10,14 @@ package Question2;
  */
 public class Main extends javax.swing.JFrame {
 
+                 //Planned Surgery | Unplanned Surgery | Emergency Surgery
+    
+    int[][] data =  { 
+                            {300, 150, 700},
+                            {250, 200, 600}
+                        };
+    
+    
     /**
      * Creates new form Main
      */
@@ -26,21 +34,133 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        cmbResults = new javax.swing.JComboBox<>();
+        btnProcess = new javax.swing.JButton();
+        btnSaveData = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtOutput = new javax.swing.JTextArea();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mnuExit = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        mnuProcess = new javax.swing.JMenuItem();
+        mnuSaveData = new javax.swing.JMenuItem();
+        mnuClear = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Operation Results:");
+
+        cmbResults.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Total Operations", "Total Operations for year 1", "Total Operations for year 2", " " }));
+
+        btnProcess.setText("PROCESS");
+        btnProcess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProcessActionPerformed(evt);
+            }
+        });
+
+        btnSaveData.setText("SAVE DATA");
+
+        txtOutput.setColumns(20);
+        txtOutput.setRows(5);
+        jScrollPane1.setViewportView(txtOutput);
+
+        jMenu1.setText("File");
+
+        mnuExit.setText("Exit");
+        mnuExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuExitActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuExit);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Tools");
+
+        mnuProcess.setText("Process");
+        jMenu2.add(mnuProcess);
+
+        mnuSaveData.setText("Save Data");
+        jMenu2.add(mnuSaveData);
+
+        mnuClear.setText("Clear");
+        mnuClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuClearActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuClear);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68)
+                        .addComponent(cmbResults, 0, 179, Short.MAX_VALUE)
+                        .addGap(34, 34, 34))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSaveData, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbResults, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(btnProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnSaveData, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
+
+       
+
+
+
+
+        
+    }//GEN-LAST:event_btnProcessActionPerformed
+
+    private void mnuExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuExitActionPerformed
+
+        System.exit(0);
+        
+    }//GEN-LAST:event_mnuExitActionPerformed
+
+    private void mnuClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuClearActionPerformed
+
+        txtOutput.setText("");
+        
+    }//GEN-LAST:event_mnuClearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +198,18 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnProcess;
+    private javax.swing.JButton btnSaveData;
+    private javax.swing.JComboBox<String> cmbResults;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem mnuClear;
+    private javax.swing.JMenuItem mnuExit;
+    private javax.swing.JMenuItem mnuProcess;
+    private javax.swing.JMenuItem mnuSaveData;
+    private javax.swing.JTextArea txtOutput;
     // End of variables declaration//GEN-END:variables
 }

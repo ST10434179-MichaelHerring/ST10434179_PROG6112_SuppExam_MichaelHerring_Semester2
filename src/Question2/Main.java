@@ -197,6 +197,7 @@ public class Main extends javax.swing.JFrame {
 
         try {
     FileWriter myWriter = new FileWriter("data.txt");
+    M
 
 
 
